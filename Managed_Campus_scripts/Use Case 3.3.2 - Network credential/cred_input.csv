@@ -1,0 +1,4 @@
+type,name/description,username/community_string,password,enable_password
+cli_credential,cli1,admin,C1sco12345,C1sco12345
+snmpV2cRead,snmpread1,snmpcommread1,,
+snmpV2cWrite,snmpwrite1,snmpcommwrite1,,

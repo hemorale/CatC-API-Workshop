@@ -1,0 +1,4 @@
+name,discoveryType,enablePasswordList,cli,snmpRead,snmpWrite,ipAddressList,protocolOrder
+Discovery_1,RANGE,C1sco12345,cli_cred,snmp_read,snmp_write,198.19.2.2-198.19.2.2,SSH
+Discovery_2,RANGE,C1sco12345,cli_cred,snmp_read,snmp_write,198.19.1.2-198.19.1.2,SSH
+Discovery_3,RANGE,C1sco12345,cli_cred3,snmp_rea5,snmp_writ3,198.19.2.2-198.19.2.2,SSH
