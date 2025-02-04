@@ -1,0 +1,808 @@
+[
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "933c8a49-a995-4932-b934-3169c3a5e8a6",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "wlc_unreachable",
+                    "issueDescription": "This network device MSX-OTT02-9800CL-06.cisco.com is unreachable from Cisco DNA Center. The device role is ACCESS.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "72f959ad-9df9-41a7-b0f9-47e566ca7765",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P1",
+                    "issueSummary": "Network Device MSX-OTT02-9800CL-06.cisco.com is unreachable from Cisco DNA Center",
+                    "issueTimestamp": 1701564255412,
+                    "deviceId": "72f959ad-9df9-41a7-b0f9-47e566ca7765",
+                    "suggestedActions": [
+                        {
+                            "message": "From the Cisco DNA Center, verify whether the last hop is reachable."
+                        },
+                        {
+                            "message": "Verify that the physical port(s) on the network device associated with the network device discovery(IP) is UP."
+                        },
+                        {
+                            "message": "Verify access to the device."
+                        }
+                    ],
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "57ed9444-7251-43a5-b0be-d2564627b6b7",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Device",
+                    "issueName": "device_time_drift",
+                    "issueDescription": "The time on Cisco DNA Center and Device \"MSX-OTT02-CAT3650-01\" has drifted too far apart. Cisco DNA Center cannot process the device data accurately if the time difference is more than 3 minutes.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "0ed45671-ec6f-4b66-9ab8-a919d31008f5",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "Excessive time lag between Cisco DNA Center and device \"MSX-OTT02-CAT3650-01\"",
+                    "issueTimestamp": 1701521644000,
+                    "deviceId": "0ed45671-ec6f-4b66-9ab8-a919d31008f5",
+                    "suggestedActions": [
+                        {
+                            "message": "Check time on the Device",
+                            "steps": [
+                                {
+                                    "entityId": "0ed45671-ec6f-4b66-9ab8-a919d31008f5",
+                                    "description": "Check system time",
+                                    "command": "show clock",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "If NTP is enabled, check whether the NTP servers are reachable from Cisco DNA Center and the Device",
+                            "steps": [
+                                {
+                                    "entityId": "0ed45671-ec6f-4b66-9ab8-a919d31008f5",
+                                    "description": "Check NTP Status",
+                                    "command": "show ntp status",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "If NTP servers are not configured, configure the NTP servers on Cisco DNA Center and Device "
+                        },
+                        {
+                            "message": "If NTP servers are not deployed, manually reset the time on Cisco DNA Center or Device so that the time is synchronized"
+                        },
+                        {
+                            "message": "Contact Cisco TAC for support \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "f2b3c0c6-84ab-4bfb-8f72-bb6140eb770f",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "switch_unreachable",
+                    "issueDescription": "This network device C9500-TEST-HOSTNAME.dnaclab.net is unreachable from Cisco DNA Center. The device role is DISTRIBUTION.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "7a6c11fd-4d13-4a28-96b7-84bec82aeffb",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P1",
+                    "issueSummary": "Network Device C9500-TEST-HOSTNAME.dnaclab.net is unreachable from Cisco DNA Center",
+                    "issueTimestamp": 1684328787324,
+                    "deviceId": "7a6c11fd-4d13-4a28-96b7-84bec82aeffb",
+                    "suggestedActions": [
+                        {
+                            "message": "From the Cisco DNA Center, verify whether the last hop is reachable."
+                        },
+                        {
+                            "message": "Verify that the physical port(s) on the network device associated with the network device discovery(IP) is UP."
+                        },
+                        {
+                            "message": "Verify access to the device."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueId": "1edbcd94-3ddb-4411-b7d0-7c03984d67dc",
+        "issueSource": "Cisco DNA",
+        "issueCategory": "Connected",
+        "issueName": "switch_interface_input_output_discards",
+        "issueDescription": "High Input/Output discard Rx 0.00% Tx 99.68% on interface 'GigabitEthernet2/0/8' (Interface description: *** Link to C2960CX - GR018 ***)",
+        "issueEntity": "network_device",
+        "issueEntityValue": "e498b146-2e75-4036-81a2-2b259406ff82",
+        "issueSeverity": "MEDIUM",
+        "issuePriority": "P3",
+        "issueSummary": "High input/output discard on interface 'GigabitEthernet2/0/8' (Interface description: *** Link to C2960CX - GR018 ***)",
+        "issueTimestamp": 1684402945330,
+        "deviceId": "e498b146-2e75-4036-81a2-2b259406ff82",
+        "suggestedActions": [
+            {
+                "message": "Use the following CLI commands to check whether the ports are drop free: ",
+                "steps": [
+                    {
+                        "entityId": "e498b146-2e75-4036-81a2-2b259406ff82",
+                        "description": "Check the affected interface ",
+                        "command": "show interface GigabitEthernet2/0/8",
+                        "stepType": "command-Runner",
+                        "runButton": null
+                    }
+                ]
+            },
+            {
+                "message": "Verify the DOM statistics on the port"
+            },
+            {
+                "message": "Check if a QoS policy is attached to the interface and QoS statistics.",
+                "steps": [
+                    {
+                        "entityId": "e498b146-2e75-4036-81a2-2b259406ff82",
+                        "description": "Check interface configuration for presence of QoS policy",
+                        "command": "show run interface GigabitEthernet2/0/8",
+                        "stepType": "command-Runner",
+                        "runButton": null
+                    },
+                    {
+                        "entityId": "e498b146-2e75-4036-81a2-2b259406ff82",
+                        "description": "Check QoS policy statistics if policy has been applied",
+                        "command": "show policy-map interface GigabitEthernet2/0/8",
+                        "stepType": "command-Runner",
+                        "runButton": null
+                    }
+                ]
+            },
+            {
+                "message": "Check queue level drops."
+            },
+            {
+                "message": "For Layer1 drops, do the following: check the interface, check if the issue is with the patch panel, check the cable, or replace the SFP transceiver. "
+            },
+            {
+                "message": "Verify whether it is a fabric port or an access port: If it is a fabric port, open Device 360 and check the status of other fabric ports. If it is an access port, open Application 360 and check for applications that are not performing properly."
+            },
+            {
+                "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+            }
+        ],
+        "issueStatus": "active",
+        "impactedHosts": []
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "89535d8e-1937-419f-bf39-952b8a107ae5",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Connected",
+                    "issueName": "fabric_aaa_server_down_trigger",
+                    "issueDescription": "AAA Server '172.23.80.21' state on Edge device 'OL_2202002_FES01.xpat.nhs.uk' is DEAD.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "fd38a62e-0510-45e8-a28e-84ac10ade26e",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P1",
+                    "issueSummary": "AAA Server '172.23.80.21' state on Edge device 'OL_2202002_FES01.xpat.nhs.uk' is DEAD.",
+                    "issueTimestamp": 1684222481794,
+                    "deviceId": "fd38a62e-0510-45e8-a28e-84ac10ade26e",
+                    "suggestedActions": [
+                        {
+                            "message": "Verify the AAA Server status.",
+                            "steps": [
+                                {
+                                    "entityId": "fd38a62e-0510-45e8-a28e-84ac10ade26e",
+                                    "description": "",
+                                    "command": "show aaa servers",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check connectivity to AAA Server.",
+                            "steps": [
+                                {
+                                    "entityId": "fd38a62e-0510-45e8-a28e-84ac10ade26e",
+                                    "description": "Run a ping test to 172.23.80.21",
+                                    "command": "ping 172.23.80.21 source loopback0",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Verify if configuration is compliant on the Fabric Edge.",
+                            "steps": [
+                                {
+                                    "entityId": "fd38a62e-0510-45e8-a28e-84ac10ade26e",
+                                    "description": "Verify AAA server configs",
+                                    "command": "show run aaa",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "d99952c3-9a9d-4ea7-a532-d09ee25034c6",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "ap_down",
+                    "issueDescription": "The AP \"FF_5301007_ACP07\" is CAPWAP disconnected from WLC and is no longer joined to it. The WLC has missed the AP\u2019s CAPWAP heartbeat message. At the time, AP was connected to switch \"FF_5300003_FES01.xpat.nhs.uk\" - port \"TenGigabitEthernet1/0/45\"",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "74:88:BB:93:DB:60",
+                    "issueSeverity": "MEDIUM",
+                    "issuePriority": "P2",
+                    "issueSummary": "AP \"FF_5301007_ACP07\" disconnected from WLC.",
+                    "issueTimestamp": 1684136663728,
+                    "deviceId": "273918cf-77be-42d1-8f91-3f5298cfb793",
+                    "suggestedActions": [
+                        {
+                            "message": "Check the Provision -> Inventory page whether \"FF_5300003_FES01.xpat.nhs.uk\" is managed by Cisco DNA Center. If not please add to inventory, otherwise will not be able to run commands for following suggested actions."
+                        },
+                        {
+                            "message": "Check the CDP neighbors command on the switch \"FF_5300003_FES01.xpat.nhs.uk\" port \"TenGigabitEthernet1/0/45\" to verify if the AP is still up, connected to the switch and the AP hostname has not changed. If the AP hostname has reset to the default value (in the form AP 74:88:BB:93:DB:60), this indicates that the AP has lost its configuration.",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check the CDP neighbors on the switch",
+                                    "command": "show cdp neighbors",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check the CDP neighbors detail command on the switch \"FF_5300003_FES01.xpat.nhs.uk\" port \"TenGigabitEthernet1/0/45\" to verify if the AP has a valid IP address. If it doesn't have an IP address, check the DHCP server.",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check the CDP neighbors details on the switch",
+                                    "command": "show cdp neighbor TenGigabitEthernet1/0/45 detail",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check whether PoE is enabled on the switch \"FF_5300003_FES01.xpat.nhs.uk\" port \"TenGigabitEthernet1/0/45\".",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check whether PoE is enabled",
+                                    "command": "show power inline TenGigabitEthernet1/0/45",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check the condition of the copper cable by running TDR (Time Domain Reflector) test on the switch \"FF_5300003_FES01.xpat.nhs.uk\" port \"TenGigabitEthernet1/0/45\". (Warning: Running this step might be disruptive to the connection)",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Start the TDR test, check the result in subsequent steps. (Warning: This command might fail for some interface types)",
+                                    "command": "test cable-diagnostics tdr interface TenGigabitEthernet1/0/45",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check the result of TDR (Time Domain Reflector) test. (Warning: Please wait for a few seconds before checking the results)",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check the result of the TDR test on the switch",
+                                    "command": "show cable-diagnostics tdr interface TenGigabitEthernet1/0/45",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Use the Path Trace tool to verify whether the AP can communicate with the WLC via UDP ports: 5246 & 5247 (CAPWAP)."
+                        },
+                        {
+                            "message": "Reboot the AP so it can rejoin the WLC."
+                        },
+                        {
+                            "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "c939d83e-2e60-4f5d-9f25-c2b5e4120483",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Onboarding",
+                    "issueName": "global_wireless_kairos_excessive_onboarding_failure_trigger",
+                    "issueDescription": "Error: issue details are missing. Please check connectivity to AI Network Analytics cloud.",
+                    "issueEntity": "Client",
+                    "issueEntityValue": "a1f9f82995062a7e0953",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P2",
+                    "issueSummary": "Excessive failures to connect - At least 42% increase in failures on p4twl4n1 in Global/OL/OL_BLK41.",
+                    "issueTimestamp": 1684092600000,
+                    "deviceId": "",
+                    "suggestedActions": null,
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "d7a4f455-b2d0-461e-86f7-573a2aa2c801",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Connected",
+                    "issueName": "fabric_reachability_dhcp_overlay_trigger",
+                    "issueDescription": "'Co-located Fabric Border and Control Plane' \"OL_INFRAS_BAC02.xpat.nhs.uk\" cannot reach the DHCP server \"172.23.244.14\" in the Virtual Network VRF 'GUEST'.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P2",
+                    "issueSummary": "'Co-located Fabric Border and Control Plane' \"OL_INFRAS_BAC02.xpat.nhs.uk\" Lost Connectivity to the DHCP Server 172.23.244.14 in the Virtual Network GUEST",
+                    "issueTimestamp": 1684246862428,
+                    "deviceId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                    "suggestedActions": [
+                        {
+                            "message": "Verify whether the DHCP server is up."
+                        },
+                        {
+                            "message": "Verify if configuration is compliant on network device",
+                            "steps": [
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Verify Fabric configuration for the Virtual Network VRF GUEST",
+                                    "command": "show run | sec lisp",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check the route from Fabric Border to DHCP server",
+                            "steps": [
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Check ip route to 172.23.244.14 in vrf GUEST",
+                                    "command": "show ip route vrf GUEST 172.23.244.14",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Verify IGP adjacencies from this node to the upstream switches.",
+                            "steps": [
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Check ISIS adjacencies",
+                                    "command": "show isis neighbors",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                },
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Check OSPF adjacencies",
+                                    "command": "show ip ospf neighbor",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                },
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Check EIGRP adjacencies",
+                                    "command": "sh eigrp address-family ipv4 neighbors",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                },
+                                {
+                                    "entityId": "dfa99274-473f-41f8-8e60-b4cca7f24939",
+                                    "description": "Check BGP adjacencies",
+                                    "command": "sh ip bgp neighbors",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "ba2ab36a-7f53-42cb-b071-f393f96ca1d9",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Connectivity",
+                    "issueName": "infra_link_down",
+                    "issueDescription": "Interface TenGigabitEthernet1/0/45 (Interface description: FF_5301007_ACP07) connecting the following two network devices is down:  Local Node: FF_5300003_FES01.xpat.nhs.uk (C9300-48UXM, C9300-48UXM) - TenGigabitEthernet1/0/45.  Peer Node: FF_5301007_ACP07 (AIR-AP4800-E-K9) - GigabitEthernet0.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P2",
+                    "issueSummary": "Interface \"TenGigabitEthernet1/0/45\" (Interface description: FF_5301007_ACP07) is down on network device \"FF_5300003_FES01.xpat.nhs.uk\"",
+                    "issueTimestamp": 1684136642824,
+                    "deviceId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                    "suggestedActions": [
+                        {
+                            "message": "Ensure the link speed, duplex, auto-negotiation and media type are supported",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check errors and link information of the affected interface on Local Node",
+                                    "command": "show interface TenGigabitEthernet1/0/45",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Verify if the configuration is compliant on the interface",
+                            "steps": [
+                                {
+                                    "entityId": "8a796880-5ebc-48dc-ae32-d060d14e19ab",
+                                    "description": "Check running configuration of the affected interface on Local Node",
+                                    "command": "show running-config interface TenGigabitEthernet1/0/45",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Configure the interfaces in local loopback. With local loopback the TX is connected to the RX at the port level inside the switch. Failure of the port to come up and ping itself with a local loop indicates a problem with the switch."
+                        },
+                        {
+                            "message": "Connect the faulty port to be tested to a spare port on the same switch, with the same cable and connectors/SFP. Configure the spare and faulty ports in two different VRFs, in the same subnet and test ping. Ping failure indicates cable/SFP problem."
+                        },
+                        {
+                            "message": "Check for compatibility issues between the two devices connected by this link."
+                        },
+                        {
+                            "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "02e4b787-211d-48d8-9045-cbed7f02fad9",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Device",
+                    "issueName": "radius_error_trigger",
+                    "issueDescription": "The RADIUS server '172.23.80.21:1812,1813' is not responding to requests being made from the network device 'RI_38-1135_FES01.xpat.nhs.uk', or the responses are not being received by the network device.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "8b4209af-2788-4d8a-bcd2-a67f2eb312ed",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P2",
+                    "issueSummary": "The RADIUS server '172.23.80.21:1812,1813' is not responding to requests being made from the network device 'RI_38-1135_FES01.xpat.nhs.uk'",
+                    "issueTimestamp": 1684091580557,
+                    "deviceId": "8b4209af-2788-4d8a-bcd2-a67f2eb312ed",
+                    "suggestedActions": [
+                        {
+                            "message": "Check connectivity between the RADIUS server and network device and ensure the port is open along the path."
+                        },
+                        {
+                            "message": "If using ISE then use the TCP Dump diagnostic tool to check if ISE is receiving the request and replying."
+                        },
+                        {
+                            "message": "The ISE live logs may suggest reasons for a lack of reply."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "ceb127ec-2ec0-41c6-9455-b84608ae0132",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "ap_reboot_crash_trigger",
+                    "issueDescription": "This AP \"OL_4902086_ACP15\" has rebooted due to a hardware or software crash.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "08:EC:F5:B6:08:60",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "AP \"OL_4902086_ACP15\" has rebooted due to a hardware or software crash.",
+                    "issueTimestamp": 1684148477818,
+                    "deviceId": "e598c3c3-1677-4d29-a5ea-db20b8ad6cb8",
+                    "suggestedActions": [
+                        {
+                            "message": "Capture this AP's crash log."
+                        },
+                        {
+                            "message": "Open a support ticket with Cisco TAC to determine the root cause of the crash."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "59572a29-feca-4588-825b-261c45723db5",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "global_radio_5_poor_rf_trigger",
+                    "issueDescription": "20% of APs on 5 GHz radio at \"Global/OL/OL_BLK23/OL_B23_L1\" are experiencing high noise. This may result in poor wireless experience for the clients connected to the APs.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "Global/OL/OL_BLK23/OL_B23_L1",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "AP(s) (5 GHz) at \"Global/OL/OL_BLK23/OL_B23_L1\" had high noise",
+                    "issueTimestamp": 1684242000000,
+                    "deviceId": "",
+                    "suggestedActions": [
+                        {
+                            "message": "Do you have a high density client environment? This can also generate a lot of interference via collisions and Wi-Fi below demodulation thresholds."
+                        },
+                        {
+                            "message": "High noise can be caused by other electronic devices such as HVAC equipment, nearby cell towers, industrial equipment etc."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "d3d8681c-75d1-4c6a-b114-1c4a0388e39c",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "global_radio_5_poor_rf_trigger",
+                    "issueDescription": "16% of APs on 5 GHz radio at \"Global/RI/RI_BLK1/RI_B1_LD\" are experiencing high interference. This may result in poor wireless experience for the clients connected to the APs.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "Global/RI/RI_BLK1/RI_B1_LD",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "AP(s) (5 GHz) at \"Global/RI/RI_BLK1/RI_B1_LD\" had high interference",
+                    "issueTimestamp": 1684152000000,
+                    "deviceId": "",
+                    "suggestedActions": [
+                        {
+                            "message": "Check if there are Rogues APs on the floor. Traffic on these rogues network will cause interference."
+                        },
+                        {
+                            "message": "Check the AP channel assignment on the floor. Are the APs on overlapping channels? This can cause co-channel interference or adjacent interference. You may also consider removing impacted channels from the DCA list to ensure more stability to the wireless clients."
+                        },
+                        {
+                            "message": "Check if the APs tx power level is too high and may need to be tuned. This can be done by tuning or changing the RF Profile for this floor on the Wireless Controller or Cisco DNA Center if you are using Cisco DNA Center for RF Profile assignment."
+                        },
+                        {
+                            "message": "Do you have a high density client environment? This can also generate a lot of interference via collisions."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "3944ce19-44ba-4e37-acb3-3ed8c1745975",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Device",
+                    "issueName": "network_device_controller_poe_trigger",
+                    "issueDescription": "PoE powered device connected on OL_4902044_FES01.xpat.nhs.uk Gi3/0/19 (Interface description: --) is flagged faulty due to Power Controller reports power Tstart error detected.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "3b768713-c179-409f-878d-5b2c599511dc",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "PoE powered device connected on OL_4902044_FES01.xpat.nhs.uk Gi3/0/19 (Interface description: --) is flagged faulty due to Power Controller reports power Tstart error detected",
+                    "issueTimestamp": 1684247674376,
+                    "deviceId": "3b768713-c179-409f-878d-5b2c599511dc",
+                    "suggestedActions": [
+                        {
+                            "message": "Check operational details of the affected interface Gi3/0/19. Compare actual consumption and negotiated values",
+                            "steps": [
+                                {
+                                    "entityId": "3b768713-c179-409f-878d-5b2c599511dc",
+                                    "description": "Detailed inline power status",
+                                    "command": "sh power inline Gi3/0/19 detail",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Check inline power status",
+                            "steps": [
+                                {
+                                    "entityId": "3b768713-c179-409f-878d-5b2c599511dc",
+                                    "description": "Inline power status of all interfaces",
+                                    "command": "show power inline",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Review the vendor specifications of the powered device to confirm its IEEE standard compliance"
+                        },
+                        {
+                            "message": "Contact Cisco TAC World Wide \u2013 https://www.cisco.com/c/en/us/support/web/tsd-cisco-worldwide-contacts.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "e49e6223-fd44-477b-a7e1-964f12b8b0ce",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Availability",
+                    "issueName": "ap_coverage_hole",
+                    "issueDescription": "This AP \"OL_5701007_ACP002\" is currently experiencing coverage hole on the 5 GHz band. \"3\" client(s) have had RSSI lower than threshold configured on WLC (default -80 dBm) over the last 3 minutes. These client(s) are considered to be in a coverage hole because they are unable to roam to neighboring AP(s) with improved coverage because the AP(s) are not available.",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "08:EC:F5:B6:93:A0",
+                    "issueSeverity": "MEDIUM",
+                    "issuePriority": "P3",
+                    "issueSummary": "AP \"OL_5701007_ACP002\" has a coverage hole.",
+                    "issueTimestamp": 1684236818132,
+                    "deviceId": "6b239cb5-3694-4d30-8baf-4464bc994224",
+                    "suggestedActions": [
+                        {
+                            "message": "Check whether the Wi-Fi coverage in this AP area is sufficient in the 5 GHz band."
+                        },
+                        {
+                            "message": "Check the AP power level. Limit the radio resource management (RRM) minimum power assignment on the the AP power to a higher value.",
+                            "steps": [
+                                {
+                                    "entityId": "8f313a45-fd9d-4bdf-bebf-60d0a9e75491",
+                                    "description": "show advanced 802.11a summary",
+                                    "command": "show advanced 802.11a summary",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Add APs to the areas that have the coverage gap."
+                        },
+                        {
+                            "message": "Verify whether an obstacle or an interference in the area is preventing the clients from roaming to a better AP."
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    },
+    {
+        "issueDetails": {
+            "issue": [
+                {
+                    "issueId": "0fa042da-76f0-490f-bd1f-69a598b40678",
+                    "issueSource": "Cisco DNA",
+                    "issueCategory": "Utilization",
+                    "issueName": "radio_5_util_trigger",
+                    "issueDescription": "The 5 GHz radio on the AP \"FF_6702013_ACP03\" has exceeded the 70% threshold and is currently experiencing 92% utilization. This is impacting 27 client(s).",
+                    "issueEntity": "network_device",
+                    "issueEntityValue": "74:88:BB:D4:8F:80",
+                    "issueSeverity": "HIGH",
+                    "issuePriority": "P3",
+                    "issueSummary": "The 5 GHz radio 1 on AP \"FF_6702013_ACP03\" is experiencing high utilization.",
+                    "issueTimestamp": 1684150500000,
+                    "deviceId": "6d69dc48-3b9d-4d2b-931b-a3892b039b97",
+                    "suggestedActions": [
+                        {
+                            "message": "Consider adding more APs with 5 GHz radios to this location."
+                        },
+                        {
+                            "message": "Check the neighbor APs on the same channel. High traffic on their clients will cause higher interference."
+                        },
+                        {
+                            "message": "Check for the presence of rogue APs and rogue clients on these APs channels. ",
+                            "steps": [
+                                {
+                                    "entityId": "95ef98e7-b004-4aae-92d5-f4a1164283d2",
+                                    "description": "show rogue ap summary",
+                                    "command": "show rogue ap summary",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                },
+                                {
+                                    "entityId": "95ef98e7-b004-4aae-92d5-f4a1164283d2",
+                                    "description": "show rogue client summary",
+                                    "command": "show rogue client summary",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Use the show 802.11a cleanair device ap FF_6702013_ACP03 command to check the CleanAir Interference Severity Index (ISI) on this AP, and the RSSI from other APs.",
+                            "steps": [
+                                {
+                                    "entityId": "95ef98e7-b004-4aae-92d5-f4a1164283d2",
+                                    "description": "show 802.11a cleanair device ap FF_6702013_ACP03",
+                                    "command": "show 802.11a cleanair device ap FF_6702013_ACP03",
+                                    "stepType": "command-Runner",
+                                    "runButton": null
+                                }
+                            ]
+                        },
+                        {
+                            "message": "Consider enabling Optimized Roaming on the WLC using - https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-5/config-guide/b_cg85/client_roaming.html"
+                        }
+                    ],
+                    "issueStatus": "active",
+                    "impactedHosts": []
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,8 @@
+jupyter
+flask
+flask-httpauth
+requests
+secrets
+time
+json
+threading
