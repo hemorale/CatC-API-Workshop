@@ -42,9 +42,15 @@ def get_dnac_sites(dnac_ip, token):
 
 # Main function to execute the script
 def main():
-    dnac_ip = os.getenv("DNAC_IP")
-    dnac_username =os.getenv("DNAC_USERNAME")
-    dnac_password = os.getenv("DNAC_PASSWORD")
+    # Use these commands to replace your own
+    dnac_ip_address = {Your own "DNAC_IP"}
+    dnac_username = {Your own "DNAC_USERNAME"}
+    dnac_password = {Your own "DNAC_PASSWORD"}
+    
+    # Use this commands if you define as OS env variables
+    #dnac_ip_address = os.getenv("DNAC_IP")
+    #dnac_username = os.getenv("DNAC_USERNAME")
+    #dnac_password = os.getenv("DNAC_PASSWORD")
 
     try:
         # Get token from DNAC
