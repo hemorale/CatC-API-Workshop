@@ -1,5 +1,6 @@
 # CatC-API-Workshop
-This is the code repository for Catalyst Center API Workshop v2.0
+This is the code repository for Catalyst Center API Workshop v2.0.
+
 Last updated: March 31, 2025 by Hector Morales
 
 This code repository has the following:
