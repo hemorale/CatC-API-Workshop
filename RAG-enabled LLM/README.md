@@ -1,6 +1,6 @@
 # 🧠 RAG (Retrieval-Augmented Generation) Scripts for Vertex AI & OpenAI
 
-This repo contains implementations of RAG (Retrieval-Augmented Generation) using both **Google Vertex AI (Gemini)** and **OpenAI (ChatGPT)** models. The scripts load data from a JSON file and use it to answer user queries in real-time.
+This repo contains implementations of RAG (Retrieval-Augmented Generation) using **OpenAI (ChatGPT)** models. The scripts load data from a JSON file and use it to answer user queries in real-time.
 
 ---
 
@@ -29,10 +29,6 @@ Despite confirming the environment variables are set (e.g., using `echo $VAR_NAM
 1. **Create a `.env` file** in the root of your project:
 
 ```dotenv
-# For Google Vertex AI
-GOOGLE_APPLICATION_CREDENTIALS=/full/path/to/your/key.json
-PROJECT_ID=your-google-cloud-project-id
-PROJECT_LOCATION=us-central1
 
 # For OpenAI
 OPENAI_API_KEY=your-openai-api-key
@@ -71,9 +67,6 @@ You can also define environment variables directly in your VS Code debugger:
       "request": "launch",
       "program": "${workspaceFolder}/RAG-code.py",
       "env": {
-        "GOOGLE_APPLICATION_CREDENTIALS": "/full/path/to/key.json",
-        "PROJECT_ID": "your-project-id",
-        "PROJECT_LOCATION": "us-central1",
         "OPENAI_API_KEY": "your-openai-api-key"
       }
     }
