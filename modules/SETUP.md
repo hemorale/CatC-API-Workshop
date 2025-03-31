@@ -2,9 +2,9 @@
 
 To run this project, you need to define the following environment variables:
 
-- `DNAC_IP`: IP address of the Cisco DNAC instance
-- `DNAC_USERNAME`: Your DNAC username
-- `DNAC_PASSWORD`: Your DNAC password
+- `DNAC_IP`: IP address of the Cisco DNAC/CatC instance
+- `DNAC_USERNAME`: Your DNAC/CatC username
+- `DNAC_PASSWORD`: Your DNAC/CatC password
 
 You can define these environment variables in different ways depending on your operating system. Choose one of the methods below:
 
