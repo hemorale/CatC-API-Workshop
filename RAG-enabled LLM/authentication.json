@@ -1,0 +1,288 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Intent API",
+		"description": "Cisco Catalyst Center Platform v. 2.3.7",
+		"version": "2.3.7"
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	],
+	"tags": [
+		{
+			"name": "Authentication",
+			"description": "Access Token Request"
+		},
+		{
+			"name": "Sites",
+			"description": "Create sites, assign devices to them and get site health"
+		},
+		{
+			"name": "Topology",
+			"description": "Get topology details and overall network health"
+		},
+		{
+			"name": "Devices",
+			"description": "Manage network devices"
+		},
+		{
+			"name": "Clients",
+			"description": "Get client (by MAC Address) health, status, and information"
+		},
+		{
+			"name": "Users",
+			"description": "Obtain information about *Users* and associated connections and devices"
+		},
+		{
+			"name": "Issues",
+			"description": "Obtain issue details, impacted hosts, and suggested actions for remediation"
+		},
+		{
+			"name": "Site Design",
+			"description": "Design/provision NFV device to site/area/building/floor"
+		},
+		{
+			"name": "Network Settings",
+			"description": "Manage Network Settings"
+		},
+		{
+			"name": "Software Image Management (SWIM)",
+			"description": "Manage activation and distribution of software images"
+		},
+		{
+			"name": "Device Onboarding (PnP)",
+			"description": "Zero-touch deployment of network devices"
+		},
+		{
+			"name": "Configuration Templates",
+			"description": "Configure and manage CLI templates"
+		},
+	{
+			"name": "Configuration Archive",
+			"description": "Export device configurations to an encrypted zip file"
+		},
+	
+		{
+			"name": "SDA",
+			"description": "(BETA) Configure and manage SDA wired fabric border devices"
+		},
+	{
+			"name": "Sensors",
+			"description": "Manage sensor test templates"
+		},
+	
+		{
+			"name": "Wireless",
+			"description": "Configure and manage SSIDs, Wireless, and RF profiles in non-fabric wireless network"
+		},
+		{
+			"name": "Command Runner",
+			"description": "Retrieve real-time device configuration and CLI keywords"
+		},
+		{
+			"name": "Discovery",
+			"description": "Discover network devices and manage discovery jobs"
+		},
+		{
+			"name": "Path Trace",
+			"description": "Network route and flow analysis"
+		},
+		{
+			"name": "File",
+			"description": "Get configuration files by namespace and ID"
+		},
+		{
+			"name": "Task",
+			"description": "Get information about asynchronous tasks"
+		},
+		{
+			"name": "Tag",
+			"description": "Assign administrator-defined tags to network devices"
+		},
+		{
+			"name": "Application Policy",
+			"description": "Create and manage applications, application sets, and application policies"
+		},
+	{
+			"name": "Applications",
+			"description": "Intent API to get a list of applications for a specific site, a device, or a client device's MAC address"
+		},
+	{
+			"name": "ITSM",
+			"description": "Provide the details of the various third party integrations that are supported"
+		},
+	
+	
+		{
+			"name": "Event Management",
+			"description": "Event based notification to external handlers"
+		},
+	
+	
+		{
+			"name": "Security Advisories",
+			"description": "Provides the details of advisories on the network and devices"
+		},
+	
+	
+		{
+			"name": "Compliance",
+			"description": "Provides compliance status data on the devices"
+		}
+	],
+	"paths": {"/dna/system/api/v1/auth/token": {
+			"post": {
+				"operationId": "authenticationAPI",
+				"tags": [
+					"Authentication"
+				],
+				"summary": "Authentication API",
+				"description": "API to obtain an access token, which remains valid for 1 hour. The token obtained using this API is required to be set as value to the X-Auth-Token HTTP Header for all API calls to Cisco DNA Center.",
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"description": "Request body content type",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"default": "application/json"
+						},
+						"in": "header"
+					},
+					{
+						"name": "Authorization",
+						"description": "API supports both Basic auth and AES key encryption as Authorization token in header. AES key encryption is optional and can be enabled under DNAC System configuration. For Basic Auth: Authorization header is Base64 encoded string of \"username:password\", For example Authorization header will contain “Basic YWRtaW46TWFnbGV2MTIz”, where YWRtaW46TWFnbGV2MTIz is the Base64 encoded string. For AES key encryption, Authorization header is Base64 encoded string of AES key. For example Authorization header will contain \"CSCO-AES-256 credentials=2k/wGz48lp3ma9sM+2xiyQ==\", where \"2k/wGz48lp3ma9sM+2xiyQ==\" is base64 encoded string of 256 bits AES key encrypted \"username:password\".",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"default": "application/json"
+						},
+						"in": "header"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful Token Generation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AuthenticationAPIResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Invalid Credentials ",
+						"content": {}
+					}
+				},
+				"x-rapi-id": "ac8a-e94c-4e69-a09d",
+				"x-rapi-overview": "API to obtain an access token, which remains valid for 1 hour. The token obtained using this API is required to be set as value to the X-Auth-Token HTTP Header for all API calls to Cisco DNA Center.",
+				"x-rapi-domain": "Authentication",
+				"x-rapi-subdomain": "",
+				"x-rapi-version": "1.0.0",
+				"x-rapi-internalPath": "/api/system/v1/auth/token",
+				"x-rapi-publicPath": "/dna/system/api/v1/auth/token",
+				"x-rapi-registerInKONG": true,
+				"x-rapi-banner": []
+			},
+            "/dna/intent/api/v1/sites/count": {
+			"get": {
+				"operationId": "getSitesCount",
+				"tags": [
+					"Site Design"
+				],
+				"summary": "Get sites count",
+				"description": "Get sites count.",
+				"parameters": [
+					{
+						"name": "name",
+						"description": "Site name.",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"default": "application/json"
+						},
+						"in": "query"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CountResponse"
+								}
+							}
+						}
+					},
+					"204": {
+						"description": "The request was successful, however no content was returned.",
+						"content": {}
+					},
+					"206": {
+						"description": "The GET request included a Range Header, and the server responded with the partial content matching the range.",
+						"content": {}
+					},
+					"400": {
+						"description": "The client made a request that the server could not understand (for example, the request syntax is incorrect).",
+						"content": {}
+					},
+					"401": {
+						"description": "The client's authentication credentials included with the request are missing or invalid.",
+						"content": {}
+					},
+					"403": {
+						"description": "The server recognizes the authentication credentials, but the client is not authorized to perform this request.",
+						"content": {}
+					},
+					"404": {
+						"description": "The client made a request for a resource that does not exist.",
+						"content": {}
+					},
+					"406": {
+						"description": "The client requested a response in a content format that this server does not support.",
+						"content": {}
+					},
+					"409": {
+						"description": "The target resource is in a conflicted state (for example, an edit conflict where a resource is being edited by multiple users). Retrying the request later might succeed.",
+						"content": {}
+					},
+					"415": {
+						"description": "The client sent a request body in a format that the server does not support (for example, XML to a server that only accepts JSON).",
+						"content": {}
+					},
+					"500": {
+						"description": "The server could not fulfill the request.",
+						"content": {}
+					},
+					"501": {
+						"description": "The server has not implemented the functionality required to fulfill the request.",
+						"content": {}
+					},
+					"503": {
+						"description": "The server is (temporarily) unavailable.",
+						"content": {}
+					},
+					"504": {
+						"description": "The server did not respond inside time restrictions and timed-out.",
+						"content": {}
+					}
+				},
+				"x-rapi-id": "0fbf-482e-446a-835f",
+				"x-rapi-overview": "Get sites count.",
+				"x-rapi-domain": "Site Management",
+				"x-rapi-subdomain": "Site Design",
+				"x-rapi-version": "1.0.0",
+				"x-rapi-internalPath": "/intent/api/v1/sites/count",
+				"x-rapi-publicPath": "/dna/intent/api/v1/sites/count",
+				"x-rapi-registerInKONG": true,
+				"x-rapi-banner": [],
+				"x-rapi-rateLimiting": "100~MINUTE"
+			}
+		}
+		}}
+}
