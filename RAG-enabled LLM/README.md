@@ -1,4 +1,4 @@
-# 🧠 RAG (Retrieval-Augmented Generation) Scripts for Vertex AI & OpenAI
+# 🧠 RAG (Retrieval-Augmented Generation) Scripts for OpenAI
 
 This repo contains implementations of RAG (Retrieval-Augmented Generation) using **OpenAI (ChatGPT)** models. The scripts load data from a JSON file and use it to answer user queries in real-time.
 
